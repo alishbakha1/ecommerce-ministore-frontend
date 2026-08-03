@@ -1,0 +1,332 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500;600;700&family=Nunito:wght@400;500;600&display=swap');
+
+:root {
+  --primary: #6b4c72;
+  --secondary: #f7d9e3;
+  --accent: #c98bb0;
+  --highlight: #f2a6c4;
+  --text-dark: #4a3b52;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Nunito', sans-serif;
+}
+
+body {
+  background: #fdf6fa;
+}
+
+.register-container {
+  min-height: 100vh;
+  display: flex;
+  background: #fdf6fa;
+}
+
+/* ===== LEFT SIDE ===== */
+.register-left {
+  width: 50%;
+  position: relative;
+  overflow: hidden;
+}
+
+.register-left img {
+  width: 100%;
+  height: 100vh;
+  object-fit: cover;
+  filter: saturate(0.9);
+  animation: zoomEffect 8s infinite alternate;
+}
+
+.overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(160deg, rgba(107, 76, 114, 0.85), rgba(201, 139, 176, 0.75));
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 40px;
+}
+
+.brand-box {
+  background: rgba(255, 255, 255, 0.1);
+  padding: 50px;
+  border-radius: 30px;
+  text-align: center;
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  color: white;
+  animation: floatBox 4s ease-in-out infinite;
+}
+
+.brand-box h1 {
+  font-family: 'Poppins', sans-serif;
+  font-size: 48px;
+  font-weight: 700;
+  margin-bottom: 15px;
+}
+
+.brand-box p {
+  font-size: 16px;
+  line-height: 1.8;
+  color: #fdf1f6;
+}
+
+/* SOCIAL ICONS - left panel */
+.social-icons {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  margin-top: 30px;
+}
+
+.social-icons a {
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.18);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+.social-icons a:hover {
+  background: var(--highlight);
+  color: var(--text-dark);
+  transform: translateY(-5px);
+}
+
+/* ===== RIGHT SIDE ===== */
+.register-right {
+  width: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 40px;
+}
+
+.register-card {
+  width: 100%;
+  max-width: 460px;
+  background: white;
+  padding: 48px 44px;
+  border-radius: 26px;
+  box-shadow: 0 20px 50px rgba(107, 76, 114, 0.14);
+  animation: fadeIn 0.8s ease;
+}
+
+.register-header {
+  text-align: center;
+  margin-bottom: 32px;
+}
+
+.register-header h2 {
+  font-family: 'Poppins', sans-serif;
+  color: var(--text-dark);
+  font-size: 32px;
+  font-weight: 700;
+  margin-bottom: 8px;
+}
+
+.register-header p {
+  color: #a591ab;
+  font-size: 14.5px;
+}
+
+/* ===== FORM ===== */
+.form-group {
+  margin-bottom: 18px;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 8px;
+  color: var(--text-dark);
+  font-weight: 600;
+  font-size: 14px;
+}
+
+.input-box {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  border: 1.5px solid #f0e0ea;
+  background: #fdf9fb;
+  border-radius: 14px;
+  padding: 0 16px;
+  transition: 0.25s ease;
+}
+
+.input-box:focus-within {
+  border-color: var(--accent);
+  background: #fff;
+  box-shadow: 0 0 0 4px rgba(201, 139, 176, 0.15);
+}
+
+.input-box i {
+  color: var(--accent);
+  font-size: 14px;
+  width: 16px;
+}
+
+.input-box input {
+  width: 100%;
+  padding: 14px 0;
+  border: none;
+  outline: none;
+  background: transparent;
+  font-size: 14.5px;
+  color: var(--text-dark);
+  font-family: 'Nunito', sans-serif;
+}
+
+.input-box input::placeholder {
+  color: #c3adbf;
+}
+
+/* ===== BUTTONS ===== */
+.register-btn,
+.login-btn {
+  width: 100%;
+  display: block;
+  text-align: center;
+  padding: 15px;
+  border: none;
+  border-radius: 14px;
+  font-size: 15px;
+  font-weight: 700;
+  font-family: 'Nunito', sans-serif;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+.register-btn {
+  background: linear-gradient(135deg, var(--primary), var(--accent));
+  color: white;
+  margin-top: 6px;
+  margin-bottom: 14px;
+  box-shadow: 0 8px 20px rgba(107, 76, 114, 0.25);
+}
+
+.register-btn:hover:not(:disabled) {
+  transform: translateY(-2px);
+  box-shadow: 0 12px 26px rgba(107, 76, 114, 0.35);
+}
+
+.register-btn:disabled {
+  opacity: 0.7;
+  cursor: not-allowed;
+  transform: none;
+}
+
+.login-btn {
+  background: transparent;
+  border: 1.5px solid var(--highlight);
+  color: var(--primary);
+}
+
+.login-btn:hover {
+  background: var(--highlight);
+  color: var(--text-dark);
+}
+
+/* ===== DIVIDER ===== */
+.divider {
+  display: flex;
+  align-items: center;
+  margin: 26px 0;
+  color: #c3adbf;
+  font-size: 12px;
+  letter-spacing: 0.5px;
+}
+
+.divider::before,
+.divider::after {
+  content: '';
+  flex: 1;
+  height: 1px;
+  background: #f0e0ea;
+}
+
+.divider span {
+  margin: 0 12px;
+  white-space: nowrap;
+}
+
+/* ===== SOCIAL LOGIN ===== */
+.social-login {
+  display: flex;
+  justify-content: center;
+  gap: 16px;
+}
+
+.social-login a {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  text-decoration: none;
+  transition: 0.3s ease;
+}
+
+.social-login a:nth-child(1) {
+  background: var(--primary);
+}
+
+.social-login a:nth-child(2) {
+  background: var(--accent);
+}
+
+.social-login a:nth-child(3) {
+  background: var(--text-dark);
+}
+
+.social-login a:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 16px rgba(107, 76, 114, 0.3);
+}
+
+/* ===== ANIMATIONS ===== */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(30px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes zoomEffect {
+  from { transform: scale(1.05); }
+  to { transform: scale(1.15); }
+}
+
+@keyframes floatBox {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-12px); }
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 992px) {
+  .register-left {
+    display: none;
+  }
+
+  .register-right {
+    width: 100%;
+  }
+}
+
+@media (max-width: 480px) {
+  .register-card {
+    padding: 36px 26px;
+  }
+
+  .register-header h2 {
+    font-size: 26px;
+  }
+}

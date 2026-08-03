@@ -1,0 +1,82 @@
+.shop-card {
+  width: 14rem;
+  border: none;
+  border-radius: 12px;
+  overflow: hidden;
+  background: #fff;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+  transition: 0.3s;
+  border: 1px solid lightgray;
+}
+
+.shop-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+}
+
+.shop-image-box {
+  width: 100%;
+  height: 260px;
+  background: #f8f8f8;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 15px;
+}
+
+.shop-image {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  object-position: center;
+  transition: transform 0.4s ease;
+}
+
+.shop-card:hover .shop-image {
+  transform: scale(1.05);
+}
+
+.shop-card .card-body {
+  padding: 15px;
+}
+
+.shop-title {
+  font-size: 16px;
+  font-weight: 600;
+  color: #023678;
+  height: 48px;
+  overflow: hidden;
+}
+
+.shop-category {
+  color: #777;
+  font-size: 14px;
+  text-transform: capitalize;
+}
+
+.shop-price {
+  color: #006ca5;
+  font-size: 18px;
+  font-weight: bold;
+  margin: 10px 0;
+}
+
+.shop-btn {
+  display: inline-block;
+  width: 100%;
+  padding: 10px;
+  text-align: center;
+  background: #E1AD01;
+  color: #000;
+  text-decoration: none;
+  border-radius: 6px;
+  font-weight: 600;
+  transition: 0.3s;
+  border: none;
+}
+
+.shop-btn:hover {
+  background: #023678;
+  color: #fff;
+}

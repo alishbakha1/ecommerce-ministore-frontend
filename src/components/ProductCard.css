@@ -1,0 +1,67 @@
+:root {
+  --primary: #3a2214;
+  --secondary: #e6b980;
+  --accent: #b5651d;
+  --highlight: #d98c3f;
+}
+
+.brand-bg {
+  background-color: var(--primary);
+}
+
+/* Card */
+.card-custom {
+  border: 1px solid #f0e2d0;
+  border-radius: 15px;
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card-custom:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 10px 25px rgba(58, 34, 20, 0.15);
+}
+
+/* Image Container */
+.box-img {
+  width: 100%;
+  height: 320px;
+  overflow: hidden;
+}
+
+.box-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: top;
+  transition: transform 0.4s ease;
+}
+
+.card-custom:hover .box-img img {
+  transform: scale(1.08);
+}
+
+/* Text */
+.card-title {
+  color: var(--primary);
+  font-weight: 600;
+}
+
+.price {
+  color: var(--accent);
+  font-size: 18px;
+  font-weight: bold;
+}
+
+/* Button */
+.btn-brand {
+  background: var(--highlight);
+  border: none;
+  color: #fff;
+  font-weight: 600;
+}
+
+.btn-brand:hover {
+  background: var(--accent);
+  color: #fff;
+}
