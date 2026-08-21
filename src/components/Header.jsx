@@ -9,6 +9,7 @@ const Header = (props) => {
 
   const handleLogout = () => {
     localStorage.removeItem("user");
+     localStorage.removeItem("token");
     alert("Logout Successfully");
     navigate("/login");
   };
